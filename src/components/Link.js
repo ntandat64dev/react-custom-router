@@ -4,7 +4,7 @@ export default function Link({ className, href, children }) {
         // Prevent full page reload
         event.preventDefault();
         // Update URL
-        window.history.replaceState({}, '', href);
+        window.history.pushState({}, '', href);
         // Communicate to Routes that URL has changed
         window.dispatchEvent(new PopStateEvent('popstate'));
     }
